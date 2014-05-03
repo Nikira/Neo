@@ -1,0 +1,31 @@
+idRef {
+  id: "528026c96161362805001b0b"
+}
+ui_name: "GoodBoy"
+nodes {
+  idRef {
+    id: "528026d96161362805001b11"
+  }
+  index: 0
+  text: "A big slimy Bug with an apron is towering in front of you. It throws a bowl of fried eggs at your feet."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "528027156161362805001b14"
+  }
+  index: 1
+  text: "There you go! Good boy!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "528010026161362805001afa"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

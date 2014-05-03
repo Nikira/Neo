@@ -1,0 +1,31 @@
+idRef {
+  id: "52812523616136dc10001a98"
+}
+ui_name: "touchBug"
+nodes {
+  idRef {
+    id: "52812530616136dc10001a9f"
+  }
+  index: 0
+  text: "Ah, there ya\' go. Comprehension Module seems intact. Guess it must be the Hunger Chip again. I told Omnitech a thousand times that it\'s bugged. Better get you to bed and call the vet... "
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5280e2cf616136dc10001a23"
+  }
+}
+nodes {
+  idRef {
+    id: "528125df616136dc10001aa7"
+  }
+  index: 1
+  text: "The Bug lifts one of it\'s legs and tries to touch you."
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

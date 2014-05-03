@@ -1,0 +1,31 @@
+idRef {
+  id: "5280e0c5616136dc100019e7"
+}
+ui_name: "watBowl"
+nodes {
+  idRef {
+    id: "5280e0cf616136dc100019ed"
+  }
+  index: 0
+  text: "You stare at the bowl for a few seconds, in utter disbelief."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5280e17a616136dc10001a0b"
+  }
+  index: 1
+  text: "Oh dear, it must have caught one of those nasty human viruses again...!\n\nChester? Chester, give me your hand if you can hear me, hon..."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "528010026161362805001afa"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

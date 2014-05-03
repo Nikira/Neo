@@ -1,0 +1,166 @@
+idRef {
+  id: "5280e312616136dc10001a25"
+}
+ui_name: "touchedBug"
+nodes {
+  idRef {
+    id: "5280e315616136dc10001a2b"
+  }
+  index: 0
+  text: "Ah, here we go. The comprehension module seems to be intact. Guess it\'s the hunger sensor again...\n\nI already told Omnitech a thousand times that it\'s buggy. Better get it to bed and call the vet, before it dies..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5280e2cf616136dc10001a23"
+  }
+}
+nodes {
+  idRef {
+    id: "5280e3e1616136dc10001a2f"
+  }
+  index: 1
+  text: "The bug stretches one of it\'s feet out, aiming for your head."
+  branches {
+    responseText: "Panicking, you decide to look for a way out of here."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "You give in to your fate, relax and let it happen."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5280e42d616136dc10001a32"
+  }
+  index: 2
+  text: "NO! Move it, BUG!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52800ffc6161362805001af9"
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 3
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5280e43e616136dc10001a35"
+  }
+  index: 3
+  text: "Be gentle..."
+  sourceInSceneRef {
+    id: "52800ffc6161362805001af9"
+  }
+  actions {
+    ops {
+      functionName: "Apply Condition Status Effect to Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "StatusCondition"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BuffDebuffType"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

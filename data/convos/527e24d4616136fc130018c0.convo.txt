@@ -1,0 +1,124 @@
+idRef {
+  id: "527e24d4616136fc130018c0"
+}
+ui_name: "omgdialogue"
+nodes {
+  idRef {
+    id: "527e24dc616136fc130018c6"
+  }
+  index: 0
+  text: "Those damned things were supposed to have gone extinct years ago."
+  branches {
+    responseText: "Pet the cat."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Back off."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "527d78f1616136e036001932"
+  }
+}
+nodes {
+  idRef {
+    id: "527ff2f861613628050018f2"
+  }
+  index: 1
+  text: "You gingerly put your hand on the cat\'s back. It tilts its head, grinning and staring at you."
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "527ff32761613628050018f4"
+  }
+  index: 2
+  text: "You take a few steps back, trying to get away from the cat. \n\nTo no avail. It keeps coming closer, purring."
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 3
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "rec_fleequest"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

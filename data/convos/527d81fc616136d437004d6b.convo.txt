@@ -1,0 +1,16 @@
+idRef {
+  id: "527d81fc616136d437004d6b"
+}
+ui_name: "SpawnDialogue"
+nodes {
+  idRef {
+    id: "527d8238616136d437004d72"
+  }
+  index: 0
+  text: "You\'re awakened by the blaring sound of 80cent\'s newest smash hit."
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

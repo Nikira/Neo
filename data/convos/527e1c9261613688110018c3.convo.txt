@@ -1,0 +1,52 @@
+idRef {
+  id: "527e1c9261613688110018c3"
+}
+ui_name: "DescriptionDiaglogue"
+nodes {
+  idRef {
+    id: "527e1ca261613688110018ca"
+  }
+  index: 0
+  text: "Lazily you open one eye, admiring the pair of nano-kids happily singing along to their portable blasters.\nBehind them, the scenery is rushing by at sonic speed."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "527e1ce761613688110018cd"
+  }
+  index: 1
+  text: "For a split second, your gaze lashes onto a huge derelict skyscraper. It seems to defy logic, still standing tall next to the ashes of bombed blocks."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "527e1e0f61613600150018c8"
+  }
+  index: 2
+  text: "Your com is triggered, displaying the cheapest stores where you might want to buy the single they\'re singing.\nYou turn it off angrily.\nNobody else in the wagon seems to take offense at the ongoing affront towards music and the human ear..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "527e1e5f61613600150018cb"
+  }
+  index: 3
+  text: "Why should they, with the Personal Happy Meter \"Happiness is always one thought away!\".\nYou\'re about to go back to sleep when something in the corner of your eye catches your attention."
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}
